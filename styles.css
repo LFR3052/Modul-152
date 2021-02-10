@@ -1,4 +1,18 @@
-img {
-    width: 10%;
-    height: 10%;
+body {
+  text-align: center;
+}
+
+.fpImg img {
+  max-width: 80%;
+  height: auto;
+  background-size: contain;
+}
+.fpImg div {
+  margin: auto;
+  max-width: 80%;
+  height: auto;
+}
+
+.fpImages {
+  display: flex;
 }
