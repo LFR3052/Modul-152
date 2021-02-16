@@ -1,0 +1,7 @@
+image: ubuntu:18.04
+before_script:
+  - apt-get update -qy
+  - apt-get install -y lftp
+build:
+  script:
+    - lftp -e "open inf-152-18i-lml.iet-gibb.net; user $FTP_USERNAME $FTP_PASSWORD; mirror -X .* -X .*/ --reverse --verbose --delete . /httpdocs; bye"
